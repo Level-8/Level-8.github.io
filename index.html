@@ -1,10 +1,200 @@
-   <!DOCTYPE html>
-   <html>
-   <head>
-     <title>我的个人网页</title>
-   </head>
-   <body>
-     <h1>欢迎访问我的网站！</h1>
-     <p>这是一个示例页面，后续可自由修改。</p>
-   </body>
-   </html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《语熹》</title>
+    <style>
+        /* 基础样式 */
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --text-color: #333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* 导航栏 */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 1rem 2rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        .nav-links {
+            display: flex;
+            justify-content: flex-end;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* 主页Banner */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+
+        /* 内容区块公共样式 */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 技能展示 */
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .skill-item {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* 项目展示 */
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* 联系方式 */
+        .contact {
+            background: #f8f9fa;
+            text-align: center;
+        }
+
+        footer {
+            background: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#home">首页</a>
+            <a href="#about">关于</a>
+            <a href="#skills">技能</a>
+            <a href="#projects">项目</a>
+            <a href="#contact">联系</a>
+        </div>
+    </nav>
+
+    <!-- 主页Banner -->
+    <section id="home" class="hero">
+        <div>
+            <h1>《语熹》</h1>
+            <p>前端开发者 | 技术爱好者</p>
+        </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about">
+        <h2>关于我</h2>
+        <p>我是零基础制作独立游戏的“抛开原理谈应用”。持续学习新技术，为我的独立游戏铺路。</p>
+    </section>
+
+    <!-- 技能 -->
+    <section id="skills">
+        <h2>技术栈</h2>
+        <div class="skills">
+            <div class="skill-item">
+                <h3>HTML/CSS</h3>
+                <p>熟练使用现代布局技术</p>
+            </div>
+            <div class="skill-item">
+                <h3>JavaScript</h3>
+                <p>熟悉ES6+语法特性</p>
+            </div>
+            <div class="skill-item">
+                <h3>React</h3>
+                <p>能够开发复杂单页应用</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 项目展示 -->
+    <section id="projects">
+        <h2>项目展示</h2>
+        <div class="projects">
+            <div class="project-card">
+                <img src="images/project1.jpg" alt="项目1" class="project-img">
+                <div style="padding: 1rem">
+                    <h3>电商平台</h3>
+                    <p>基于React的全栈项目</p>
+                </div>
+            </div>
+            <!-- 重复类似结构添加更多项目 -->
+        </div>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact">
+        <h2>保持联系</h2>
+        <p>📧 example@email.com</p>
+        <p>📱 GitHub: github.com/yourusername</p>
+    </section>
+
+    <footer>
+        <p>© 2025 语熹. All rights reserved.</p>
+    </footer>
+</body>
+</html>
